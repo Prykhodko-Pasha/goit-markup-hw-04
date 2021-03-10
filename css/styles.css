@@ -8,6 +8,7 @@
   --logo-header-color: #000;
   --hero-button-focus-color: #188ce8;
   --filters-button-color: #f5f4fa;
+  --icons-main-color: #afb1b8;
 }
 
 .link {
@@ -172,6 +173,8 @@ img {
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
 }
@@ -275,6 +278,36 @@ img {
 
 .team-item-description {
   padding: 30px 0;
+}
+
+/* ============ ПОСТОЯННЫЕ КЛИЕНТЫ ============ */
+.client-item {
+  flex-basis: calc(100% / 6 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  border: 1px solid var(--icons-main-color);
+  border-radius: 4px;
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.client-logo {
+  fill: var(--icons-main-color);
+}
+
+.client-link:hover .client-logo,
+.client-link:focus .client-logo {
+  fill: var(--active-color);
+}
+
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--active-color);
 }
 
 /* ============ FOOTER ============ */
