@@ -89,9 +89,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.icon-link svg {
   fill: var(--icons-main-color);
 }
 
@@ -161,11 +158,13 @@ img {
   color: var(--secondary-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  fill: var(--secondary-color);
 }
 
 .header-contacts-link:hover,
 .header-contacts-link:focus {
   color: var(--active-color);
+  fill: var(--active-color);
 }
 
 .container .navigation-list {
@@ -174,12 +173,6 @@ img {
 
 .header-contacts-link svg {
   margin-right: 10px;
-  fill: var(--secondary-color);
-}
-
-.header-contacts-link:hover svg,
-.header-contacts-link:focus svg {
-  fill: var(--active-color);
 }
 
 /* ============ ШАПКА ============ */
@@ -265,10 +258,6 @@ img {
   margin-bottom: 30px;
 }
 
-/* .client-logo {
-  fill: var(--icons-main-color);
-} */
-
 /* ============ ЧЕМ МЫ ЗАНИМАЕМСЯ ============ */
 .section-header {
   font-weight: 700;
@@ -353,12 +342,8 @@ img {
   height: 90px;
 }
 
-/* .client-logo {
-  fill: var(--icons-main-color);
-} */
-
-.icon-link:hover svg,
-.icon-link:focus svg {
+.client-item .icon-link:hover,
+.client-item .icon-link:focus {
   fill: var(--active-color);
 }
 
@@ -432,9 +417,6 @@ address li:not(:last-child) {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.join .icon-link svg {
   fill: var(--third-color);
 }
 
