@@ -7,7 +7,6 @@
   --light-bg-color: #f5f4fa;
   --logo-header-color: #000;
   --hero-button-focus-color: #188ce8;
-  --filters-button-color: #f5f4fa;
   --icons-main-color: #afb1b8;
 }
 
@@ -84,6 +83,16 @@ section {
 
 img {
   display: block;
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-link svg {
+  fill: var(--icons-main-color);
 }
 
 /* ============ HEADER ============ */
@@ -163,6 +172,16 @@ img {
   margin-left: auto; /* придавливаем контакты вправо */
 }
 
+.header-contacts-link svg {
+  margin-right: 10px;
+  fill: var(--secondary-color);
+}
+
+.header-contacts-link:hover svg,
+.header-contacts-link:focus svg {
+  fill: var(--active-color);
+}
+
 /* ============ ШАПКА ============ */
 .hero {
   background-color: #c4c4c4;
@@ -231,6 +250,25 @@ img {
   color: var(--secondary-color);
 }
 
+.client-item {
+  flex-basis: calc(100% / 6 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  border: 1px solid var(--icons-main-color);
+  border-radius: 4px;
+}
+
+.features .icon-link {
+  height: 120px;
+  background: var(--light-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+/* .client-logo {
+  fill: var(--icons-main-color);
+} */
+
 /* ============ ЧЕМ МЫ ЗАНИМАЕМСЯ ============ */
 .section-header {
   font-weight: 700;
@@ -267,6 +305,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
+  margin-bottom: 16px;
 }
 
 .team-item {
@@ -277,7 +316,28 @@ img {
 }
 
 .team-item-description {
-  padding: 30px 0;
+  padding: 30px 32px;
+}
+
+.team-item-description .icon-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.team-item-description .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-item-description .icon-link:hover,
+.team-item-description .icon-link:focus {
+  background-color: var(--active-color);
+}
+
+.team-item-description .icon-link:hover svg,
+.team-item-description .icon-link:focus svg {
+  fill: var(--third-color);
 }
 
 /* ============ ПОСТОЯННЫЕ КЛИЕНТЫ ============ */
@@ -289,19 +349,16 @@ img {
   border-radius: 4px;
 }
 
-.client-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.clients .icon-link {
   height: 90px;
 }
 
-.client-logo {
+/* .client-logo {
   fill: var(--icons-main-color);
-}
+} */
 
-.client-link:hover .client-logo,
-.client-link:focus .client-logo {
+.icon-link:hover svg,
+.icon-link:focus svg {
   fill: var(--active-color);
 }
 
@@ -349,9 +406,47 @@ address li:not(:last-child) {
   margin-bottom: 9px;
 }
 
-/* address li {
-  margin-top: 9px;
-} */
+.footer .container {
+  display: flex;
+}
+
+.join {
+  margin-left: 70px;
+  padding-top: 12px;
+  width: 206px;
+}
+
+.footer h2 {
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-color);
+}
+
+.join .icon-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.join .icon-link svg {
+  fill: var(--third-color);
+}
+
+.join .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.join .icon-link:hover,
+.join .icon-link:focus {
+  background-color: var(--active-color);
+}
 
 /* ============ PORTFOLIO ============ */
 .filters-list li:not(:last-child) {
@@ -374,7 +469,7 @@ address li:not(:last-child) {
   color: var(--main-color);
   border: none;
   border-radius: 4px;
-  background-color: var(--filters-button-color);
+  background-color: var(--light-bg-color);
   padding: 6px 22px;
 }
 
